@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB14953320CD979F0007F1FE /* DifficultyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14953220CD979F0007F1FE /* DifficultyPickerView.swift */; };
+		FB16B1D820CB94E800A91A65 /* LengthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16B1D720CB94E800A91A65 /* LengthPickerView.swift */; };
+		FBC95E9020BF5349009ED6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95E8F20BF5349009ED6C0 /* AppDelegate.swift */; };
+		FBC95E9720BF534C009ED6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBC95E9620BF534C009ED6C0 /* Assets.xcassets */; };
+		FBC95EA520BF534C009ED6C0 /* TheLifeGameTestOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EA420BF534C009ED6C0 /* TheLifeGameTestOneTests.swift */; };
+		FBC95EB020BF534C009ED6C0 /* TheLifeGameTestOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EAF20BF534C009ED6C0 /* TheLifeGameTestOneUITests.swift */; };
+		FBC95EBE20BF53C9009ED6C0 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EBD20BF53C9009ED6C0 /* Goal.swift */; };
+		FBC95EC020BF53D3009ED6C0 /* GoalEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EBF20BF53D3009ED6C0 /* GoalEditView.swift */; };
+		FBC95EC220BF53DE009ED6C0 /* GoalDescriptionEditViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EC120BF53DE009ED6C0 /* GoalDescriptionEditViewDelegate.swift */; };
+		FBC95EC420BF53E7009ED6C0 /* GoalTitleEditViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EC320BF53E7009ED6C0 /* GoalTitleEditViewDelegate.swift */; };
+		FBC95EC620BF53EF009ED6C0 /* PointsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EC520BF53EF009ED6C0 /* PointsPickerView.swift */; };
+		FBC95ECA20BF53FC009ED6C0 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95EC920BF53FC009ED6C0 /* Difficulty.swift */; };
+		FBC95ECC20BF5401009ED6C0 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC95ECB20BF5401009ED6C0 /* Length.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBC95EA120BF534C009ED6C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBC95E8420BF5348009ED6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBC95E8B20BF5348009ED6C0;
+			remoteInfo = TheLifeGameTestOne;
+		};
+		FBC95EAC20BF534C009ED6C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBC95E8420BF5348009ED6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBC95E8B20BF5348009ED6C0;
+			remoteInfo = TheLifeGameTestOne;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB14953220CD979F0007F1FE /* DifficultyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyPickerView.swift; sourceTree = "<group>"; };
+		FB16B1D720CB94E800A91A65 /* LengthPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LengthPickerView.swift; path = "../../The Life Game/LengthPickerView.swift"; sourceTree = "<group>"; };
+		FBC95E8C20BF5348009ED6C0 /* TheLifeGameTestOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLifeGameTestOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC95E8F20BF5349009ED6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FBC95E9620BF534C009ED6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBC95E9B20BF534C009ED6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC95EA020BF534C009ED6C0 /* TheLifeGameTestOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheLifeGameTestOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC95EA420BF534C009ED6C0 /* TheLifeGameTestOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheLifeGameTestOneTests.swift; sourceTree = "<group>"; };
+		FBC95EA620BF534C009ED6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC95EAB20BF534C009ED6C0 /* TheLifeGameTestOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheLifeGameTestOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBC95EAF20BF534C009ED6C0 /* TheLifeGameTestOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheLifeGameTestOneUITests.swift; sourceTree = "<group>"; };
+		FBC95EB120BF534C009ED6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC95EBD20BF53C9009ED6C0 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Goal.swift; path = "../../The Life Game/Goal.swift"; sourceTree = "<group>"; };
+		FBC95EBF20BF53D3009ED6C0 /* GoalEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalEditView.swift; path = "../../The Life Game/GoalEditView.swift"; sourceTree = "<group>"; };
+		FBC95EC120BF53DE009ED6C0 /* GoalDescriptionEditViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalDescriptionEditViewDelegate.swift; path = "../../The Life Game/GoalDescriptionEditViewDelegate.swift"; sourceTree = "<group>"; };
+		FBC95EC320BF53E7009ED6C0 /* GoalTitleEditViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalTitleEditViewDelegate.swift; path = "../../The Life Game/GoalTitleEditViewDelegate.swift"; sourceTree = "<group>"; };
+		FBC95EC520BF53EF009ED6C0 /* PointsPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointsPickerView.swift; path = "../../The Life Game/PointsPickerView.swift"; sourceTree = "<group>"; };
+		FBC95EC920BF53FC009ED6C0 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = "../../The Life Game/Difficulty.swift"; sourceTree = "<group>"; };
+		FBC95ECB20BF5401009ED6C0 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Length.swift; path = "../../The Life Game/Length.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBC95E8920BF5348009ED6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95E9D20BF534C009ED6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95EA820BF534C009ED6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBC95E8320BF5348009ED6C0 = {
+			isa = PBXGroup;
+			children = (
+				FBC95E8E20BF5349009ED6C0 /* TheLifeGameTestOne */,
+				FBC95EA320BF534C009ED6C0 /* TheLifeGameTestOneTests */,
+				FBC95EAE20BF534C009ED6C0 /* TheLifeGameTestOneUITests */,
+				FBC95E8D20BF5348009ED6C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBC95E8D20BF5348009ED6C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBC95E8C20BF5348009ED6C0 /* TheLifeGameTestOne.app */,
+				FBC95EA020BF534C009ED6C0 /* TheLifeGameTestOneTests.xctest */,
+				FBC95EAB20BF534C009ED6C0 /* TheLifeGameTestOneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBC95E8E20BF5349009ED6C0 /* TheLifeGameTestOne */ = {
+			isa = PBXGroup;
+			children = (
+				FBC95EBD20BF53C9009ED6C0 /* Goal.swift */,
+				FBC95EBF20BF53D3009ED6C0 /* GoalEditView.swift */,
+				FBC95EC120BF53DE009ED6C0 /* GoalDescriptionEditViewDelegate.swift */,
+				FBC95EC320BF53E7009ED6C0 /* GoalTitleEditViewDelegate.swift */,
+				FBC95EC520BF53EF009ED6C0 /* PointsPickerView.swift */,
+				FBC95EC920BF53FC009ED6C0 /* Difficulty.swift */,
+				FB14953220CD979F0007F1FE /* DifficultyPickerView.swift */,
+				FBC95ECB20BF5401009ED6C0 /* Length.swift */,
+				FBC95E8F20BF5349009ED6C0 /* AppDelegate.swift */,
+				FB16B1D720CB94E800A91A65 /* LengthPickerView.swift */,
+				FBC95E9620BF534C009ED6C0 /* Assets.xcassets */,
+				FBC95E9B20BF534C009ED6C0 /* Info.plist */,
+			);
+			path = TheLifeGameTestOne;
+			sourceTree = "<group>";
+		};
+		FBC95EA320BF534C009ED6C0 /* TheLifeGameTestOneTests */ = {
+			isa = PBXGroup;
+			children = (
+				FBC95EA420BF534C009ED6C0 /* TheLifeGameTestOneTests.swift */,
+				FBC95EA620BF534C009ED6C0 /* Info.plist */,
+			);
+			path = TheLifeGameTestOneTests;
+			sourceTree = "<group>";
+		};
+		FBC95EAE20BF534C009ED6C0 /* TheLifeGameTestOneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FBC95EAF20BF534C009ED6C0 /* TheLifeGameTestOneUITests.swift */,
+				FBC95EB120BF534C009ED6C0 /* Info.plist */,
+			);
+			path = TheLifeGameTestOneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBC95E8B20BF5348009ED6C0 /* TheLifeGameTestOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBC95EB420BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOne" */;
+			buildPhases = (
+				FBC95E8820BF5348009ED6C0 /* Sources */,
+				FBC95E8920BF5348009ED6C0 /* Frameworks */,
+				FBC95E8A20BF5348009ED6C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheLifeGameTestOne;
+			productName = TheLifeGameTestOne;
+			productReference = FBC95E8C20BF5348009ED6C0 /* TheLifeGameTestOne.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBC95E9F20BF534C009ED6C0 /* TheLifeGameTestOneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBC95EB720BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOneTests" */;
+			buildPhases = (
+				FBC95E9C20BF534C009ED6C0 /* Sources */,
+				FBC95E9D20BF534C009ED6C0 /* Frameworks */,
+				FBC95E9E20BF534C009ED6C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBC95EA220BF534C009ED6C0 /* PBXTargetDependency */,
+			);
+			name = TheLifeGameTestOneTests;
+			productName = TheLifeGameTestOneTests;
+			productReference = FBC95EA020BF534C009ED6C0 /* TheLifeGameTestOneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBC95EAA20BF534C009ED6C0 /* TheLifeGameTestOneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBC95EBA20BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOneUITests" */;
+			buildPhases = (
+				FBC95EA720BF534C009ED6C0 /* Sources */,
+				FBC95EA820BF534C009ED6C0 /* Frameworks */,
+				FBC95EA920BF534C009ED6C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBC95EAD20BF534C009ED6C0 /* PBXTargetDependency */,
+			);
+			name = TheLifeGameTestOneUITests;
+			productName = TheLifeGameTestOneUITests;
+			productReference = FBC95EAB20BF534C009ED6C0 /* TheLifeGameTestOneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBC95E8420BF5348009ED6C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Liam Keeley";
+				TargetAttributes = {
+					FBC95E8B20BF5348009ED6C0 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					FBC95E9F20BF534C009ED6C0 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = FBC95E8B20BF5348009ED6C0;
+					};
+					FBC95EAA20BF534C009ED6C0 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = FBC95E8B20BF5348009ED6C0;
+					};
+				};
+			};
+			buildConfigurationList = FBC95E8720BF5348009ED6C0 /* Build configuration list for PBXProject "TheLifeGameTestOne" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBC95E8320BF5348009ED6C0;
+			productRefGroup = FBC95E8D20BF5348009ED6C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBC95E8B20BF5348009ED6C0 /* TheLifeGameTestOne */,
+				FBC95E9F20BF534C009ED6C0 /* TheLifeGameTestOneTests */,
+				FBC95EAA20BF534C009ED6C0 /* TheLifeGameTestOneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBC95E8A20BF5348009ED6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC95E9720BF534C009ED6C0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95E9E20BF534C009ED6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95EA920BF534C009ED6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBC95E8820BF5348009ED6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC95EC420BF53E7009ED6C0 /* GoalTitleEditViewDelegate.swift in Sources */,
+				FBC95EC220BF53DE009ED6C0 /* GoalDescriptionEditViewDelegate.swift in Sources */,
+				FB16B1D820CB94E800A91A65 /* LengthPickerView.swift in Sources */,
+				FBC95EC020BF53D3009ED6C0 /* GoalEditView.swift in Sources */,
+				FBC95ECA20BF53FC009ED6C0 /* Difficulty.swift in Sources */,
+				FBC95EBE20BF53C9009ED6C0 /* Goal.swift in Sources */,
+				FBC95ECC20BF5401009ED6C0 /* Length.swift in Sources */,
+				FB14953320CD979F0007F1FE /* DifficultyPickerView.swift in Sources */,
+				FBC95E9020BF5349009ED6C0 /* AppDelegate.swift in Sources */,
+				FBC95EC620BF53EF009ED6C0 /* PointsPickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95E9C20BF534C009ED6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC95EA520BF534C009ED6C0 /* TheLifeGameTestOneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBC95EA720BF534C009ED6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC95EB020BF534C009ED6C0 /* TheLifeGameTestOneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBC95EA220BF534C009ED6C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBC95E8B20BF5348009ED6C0 /* TheLifeGameTestOne */;
+			targetProxy = FBC95EA120BF534C009ED6C0 /* PBXContainerItemProxy */;
+		};
+		FBC95EAD20BF534C009ED6C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBC95E8B20BF5348009ED6C0 /* TheLifeGameTestOne */;
+			targetProxy = FBC95EAC20BF534C009ED6C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FBC95EB220BF534C009ED6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBC95EB320BF534C009ED6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBC95EB520BF534C009ED6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOne";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBC95EB620BF534C009ED6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOne";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FBC95EB820BF534C009ED6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheLifeGameTestOne.app/TheLifeGameTestOne";
+			};
+			name = Debug;
+		};
+		FBC95EB920BF534C009ED6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheLifeGameTestOne.app/TheLifeGameTestOne";
+			};
+			name = Release;
+		};
+		FBC95EBB20BF534C009ED6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheLifeGameTestOne;
+			};
+			name = Debug;
+		};
+		FBC95EBC20BF534C009ED6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheLifeGameTestOneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.TheLifeGameTestOneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheLifeGameTestOne;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBC95E8720BF5348009ED6C0 /* Build configuration list for PBXProject "TheLifeGameTestOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC95EB220BF534C009ED6C0 /* Debug */,
+				FBC95EB320BF534C009ED6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBC95EB420BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC95EB520BF534C009ED6C0 /* Debug */,
+				FBC95EB620BF534C009ED6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBC95EB720BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC95EB820BF534C009ED6C0 /* Debug */,
+				FBC95EB920BF534C009ED6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBC95EBA20BF534C009ED6C0 /* Build configuration list for PBXNativeTarget "TheLifeGameTestOneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBC95EBB20BF534C009ED6C0 /* Debug */,
+				FBC95EBC20BF534C009ED6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBC95E8420BF5348009ED6C0 /* Project object */;
+}

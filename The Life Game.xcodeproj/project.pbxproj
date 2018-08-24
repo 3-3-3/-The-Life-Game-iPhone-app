@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BA1686820B4DA5E0055EF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1686720B4DA5E0055EF52 /* AppDelegate.swift */; };
+		1BA1686F20B4DA5E0055EF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA1686E20B4DA5E0055EF52 /* Assets.xcassets */; };
+		1BA1687D20B4DA5E0055EF52 /* The_Life_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1687C20B4DA5E0055EF52 /* The_Life_GameTests.swift */; };
+		1BA1688820B4DA5E0055EF52 /* The_Life_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1688720B4DA5E0055EF52 /* The_Life_GameUITests.swift */; };
+		1BA1689620B520720055EF52 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689520B520720055EF52 /* Goal.swift */; };
+		1BA1689A20B60D8D0055EF52 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689920B60D8D0055EF52 /* Difficulty.swift */; };
+		1BA1689C20B60DBF0055EF52 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689B20B60DBF0055EF52 /* Length.swift */; };
+		FB1212D72124BB1000E95D47 /* PickerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1212D62124BB1000E95D47 /* PickerNode.swift */; };
+		FB1536712116A3C5000AEE85 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1536702116A3C5000AEE85 /* Color.swift */; };
+		FB15367B211CA7F4000AEE85 /* GeneralData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15367A211CA7F4000AEE85 /* GeneralData.swift */; };
+		FB4498E4212FC2DD00E968AA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4498E3212FC2DD00E968AA /* Launch Screen.storyboard */; };
+		FB6AF31221026D5E001309BC /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AF31121026D5E001309BC /* Main.swift */; };
+		FBF3568F2107F9DF002D1753 /* MainInterfaceControllerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */; };
+		FBF356912108572D002D1753 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF356902108572D002D1753 /* UserData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BA1687920B4DA5E0055EF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA1685C20B4DA5E0055EF52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA1686320B4DA5E0055EF52;
+			remoteInfo = "The Life Game";
+		};
+		1BA1688420B4DA5E0055EF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BA1685C20B4DA5E0055EF52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BA1686320B4DA5E0055EF52;
+			remoteInfo = "The Life Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BA1686720B4DA5E0055EF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1BA1686E20B4DA5E0055EF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BA1687C20B4DA5E0055EF52 /* The_Life_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Life_GameTests.swift; sourceTree = "<group>"; };
+		1BA1687E20B4DA5E0055EF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA1688720B4DA5E0055EF52 /* The_Life_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Life_GameUITests.swift; sourceTree = "<group>"; };
+		1BA1688920B4DA5E0055EF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA1689520B520720055EF52 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		1BA1689920B60D8D0055EF52 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		1BA1689B20B60DBF0055EF52 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
+		FB1212D62124BB1000E95D47 /* PickerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerNode.swift; sourceTree = "<group>"; };
+		FB12C6E4212FBEAF00DD3B4F /* The Life Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Life Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1536702116A3C5000AEE85 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FB15367A211CA7F4000AEE85 /* GeneralData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralData.swift; sourceTree = "<group>"; };
+		FB4498E1212FC01200E968AA /* The Life GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Life GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4498E2212FC01200E968AA /* The Life GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Life GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4498E3212FC2DD00E968AA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FB6AF31121026D5E001309BC /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceControllerButton.swift; sourceTree = "<group>"; };
+		FBF356902108572D002D1753 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1BA1686120B4DA5E0055EF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1687520B4DA5E0055EF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1688020B4DA5E0055EF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BA1685B20B4DA5D0055EF52 = {
+			isa = PBXGroup;
+			children = (
+				1BA1686620B4DA5E0055EF52 /* The Life Game */,
+				1BA1687B20B4DA5E0055EF52 /* The Life GameTests */,
+				1BA1688620B4DA5E0055EF52 /* The Life GameUITests */,
+				FB12C6E4212FBEAF00DD3B4F /* The Life Game.app */,
+				FB4498E1212FC01200E968AA /* The Life GameTests.xctest */,
+				FB4498E2212FC01200E968AA /* The Life GameUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		1BA1686620B4DA5E0055EF52 /* The Life Game */ = {
+			isa = PBXGroup;
+			children = (
+				FB4498E3212FC2DD00E968AA /* Launch Screen.storyboard */,
+				FB15367A211CA7F4000AEE85 /* GeneralData.swift */,
+				FB1212D62124BB1000E95D47 /* PickerNode.swift */,
+				FB1536702116A3C5000AEE85 /* Color.swift */,
+				1BA1689520B520720055EF52 /* Goal.swift */,
+				1BA1689920B60D8D0055EF52 /* Difficulty.swift */,
+				1BA1689B20B60DBF0055EF52 /* Length.swift */,
+				1BA1686720B4DA5E0055EF52 /* AppDelegate.swift */,
+				FBF356902108572D002D1753 /* UserData.swift */,
+				FB6AF31121026D5E001309BC /* Main.swift */,
+				FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */,
+				1BA1686E20B4DA5E0055EF52 /* Assets.xcassets */,
+			);
+			path = "The Life Game";
+			sourceTree = "<group>";
+		};
+		1BA1687B20B4DA5E0055EF52 /* The Life GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BA1687C20B4DA5E0055EF52 /* The_Life_GameTests.swift */,
+				1BA1687E20B4DA5E0055EF52 /* Info.plist */,
+			);
+			path = "The Life GameTests";
+			sourceTree = "<group>";
+		};
+		1BA1688620B4DA5E0055EF52 /* The Life GameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1BA1688720B4DA5E0055EF52 /* The_Life_GameUITests.swift */,
+				1BA1688920B4DA5E0055EF52 /* Info.plist */,
+			);
+			path = "The Life GameUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1BA1686320B4DA5E0055EF52 /* The Life Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA1688C20B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life Game" */;
+			buildPhases = (
+				1BA1686020B4DA5E0055EF52 /* Sources */,
+				1BA1686120B4DA5E0055EF52 /* Frameworks */,
+				1BA1686220B4DA5E0055EF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Life Game";
+			productName = "The Life Game";
+			productReference = FB12C6E4212FBEAF00DD3B4F /* The Life Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1BA1687720B4DA5E0055EF52 /* The Life GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA1688F20B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life GameTests" */;
+			buildPhases = (
+				1BA1687420B4DA5E0055EF52 /* Sources */,
+				1BA1687520B4DA5E0055EF52 /* Frameworks */,
+				1BA1687620B4DA5E0055EF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BA1687A20B4DA5E0055EF52 /* PBXTargetDependency */,
+			);
+			name = "The Life GameTests";
+			productName = "The Life GameTests";
+			productReference = FB4498E1212FC01200E968AA /* The Life GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1BA1688220B4DA5E0055EF52 /* The Life GameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA1689220B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life GameUITests" */;
+			buildPhases = (
+				1BA1687F20B4DA5E0055EF52 /* Sources */,
+				1BA1688020B4DA5E0055EF52 /* Frameworks */,
+				1BA1688120B4DA5E0055EF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BA1688520B4DA5E0055EF52 /* PBXTargetDependency */,
+			);
+			name = "The Life GameUITests";
+			productName = "The Life GameUITests";
+			productReference = FB4498E2212FC01200E968AA /* The Life GameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1BA1685C20B4DA5E0055EF52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Liam Keeley";
+				TargetAttributes = {
+					1BA1686320B4DA5E0055EF52 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9T89Q6679L;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+					};
+					1BA1687720B4DA5E0055EF52 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9T89Q6679L;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1BA1686320B4DA5E0055EF52;
+					};
+					1BA1688220B4DA5E0055EF52 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9T89Q6679L;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1BA1686320B4DA5E0055EF52;
+					};
+				};
+			};
+			buildConfigurationList = 1BA1685F20B4DA5E0055EF52 /* Build configuration list for PBXProject "The Life Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1BA1685B20B4DA5D0055EF52;
+			productRefGroup = 1BA1685B20B4DA5D0055EF52;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BA1686320B4DA5E0055EF52 /* The Life Game */,
+				1BA1687720B4DA5E0055EF52 /* The Life GameTests */,
+				1BA1688220B4DA5E0055EF52 /* The Life GameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BA1686220B4DA5E0055EF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4498E4212FC2DD00E968AA /* Launch Screen.storyboard in Resources */,
+				1BA1686F20B4DA5E0055EF52 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1687620B4DA5E0055EF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1688120B4DA5E0055EF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1BA1686020B4DA5E0055EF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF356912108572D002D1753 /* UserData.swift in Sources */,
+				1BA1689C20B60DBF0055EF52 /* Length.swift in Sources */,
+				FB15367B211CA7F4000AEE85 /* GeneralData.swift in Sources */,
+				FBF3568F2107F9DF002D1753 /* MainInterfaceControllerButton.swift in Sources */,
+				FB1212D72124BB1000E95D47 /* PickerNode.swift in Sources */,
+				1BA1689A20B60D8D0055EF52 /* Difficulty.swift in Sources */,
+				FB6AF31221026D5E001309BC /* Main.swift in Sources */,
+				FB1536712116A3C5000AEE85 /* Color.swift in Sources */,
+				1BA1689620B520720055EF52 /* Goal.swift in Sources */,
+				1BA1686820B4DA5E0055EF52 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1687420B4DA5E0055EF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA1687D20B4DA5E0055EF52 /* The_Life_GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BA1687F20B4DA5E0055EF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA1688820B4DA5E0055EF52 /* The_Life_GameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BA1687A20B4DA5E0055EF52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA1686320B4DA5E0055EF52 /* The Life Game */;
+			targetProxy = 1BA1687920B4DA5E0055EF52 /* PBXContainerItemProxy */;
+		};
+		1BA1688520B4DA5E0055EF52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BA1686320B4DA5E0055EF52 /* The Life Game */;
+			targetProxy = 1BA1688420B4DA5E0055EF52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BA1688A20B4DA5F0055EF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1BA1688B20B4DA5F0055EF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1BA1688D20B4DA5F0055EF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1BA1688E20B4DA5F0055EF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1BA1689020B4DA5F0055EF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "The Life GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Life Game.app/The Life Game";
+			};
+			name = Debug;
+		};
+		1BA1689120B4DA5F0055EF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "The Life GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-GameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Life Game.app/The Life Game";
+			};
+			name = Release;
+		};
+		1BA1689320B4DA5F0055EF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "The Life GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "The Life Game";
+			};
+			name = Debug;
+		};
+		1BA1689420B4DA5F0055EF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 9T89Q6679L;
+				INFOPLIST_FILE = "The Life GameUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Liam-Keeley.The-Life-GameUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "The Life Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BA1685F20B4DA5E0055EF52 /* Build configuration list for PBXProject "The Life Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA1688A20B4DA5F0055EF52 /* Debug */,
+				1BA1688B20B4DA5F0055EF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA1688C20B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA1688D20B4DA5F0055EF52 /* Debug */,
+				1BA1688E20B4DA5F0055EF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA1688F20B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA1689020B4DA5F0055EF52 /* Debug */,
+				1BA1689120B4DA5F0055EF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BA1689220B4DA5F0055EF52 /* Build configuration list for PBXNativeTarget "The Life GameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BA1689320B4DA5F0055EF52 /* Debug */,
+				1BA1689420B4DA5F0055EF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1BA1685C20B4DA5E0055EF52 /* Project object */;
+}
