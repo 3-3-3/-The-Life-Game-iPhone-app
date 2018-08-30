@@ -116,7 +116,7 @@ public class GoalNode : PickerNode {
   }
   
   public override func pickButton(parent: UIView, color: UIColor = Color.BACKGROUND_FOUR) -> UIView {
-    var selector : UIView = self.goal.addTextContainer(parentview: parent)
+    var selector : UIView = self.goal.addTextContainer(parentview: parent).view
     if selector.gestureRecognizers != nil {
       for gesture in selector.gestureRecognizers! {
         selector.removeGestureRecognizer(gesture)

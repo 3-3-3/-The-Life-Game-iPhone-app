@@ -19,6 +19,7 @@
 		FB15367B211CA7F4000AEE85 /* GeneralData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB15367A211CA7F4000AEE85 /* GeneralData.swift */; };
 		FB4498E4212FC2DD00E968AA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4498E3212FC2DD00E968AA /* Launch Screen.storyboard */; };
 		FB6AF31221026D5E001309BC /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6AF31121026D5E001309BC /* Main.swift */; };
+		FBC30DB7213859390062DEFB /* GoalPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC30DB6213859390062DEFB /* GoalPopover.swift */; };
 		FBF3568F2107F9DF002D1753 /* MainInterfaceControllerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */; };
 		FBF356912108572D002D1753 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF356902108572D002D1753 /* UserData.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		FB4498E2212FC01200E968AA /* The Life GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Life GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4498E3212FC2DD00E968AA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FB6AF31121026D5E001309BC /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FBC30DB6213859390062DEFB /* GoalPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalPopover.swift; sourceTree = "<group>"; };
 		FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceControllerButton.swift; sourceTree = "<group>"; };
 		FBF356902108572D002D1753 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				1BA1689B20B60DBF0055EF52 /* Length.swift */,
 				1BA1686720B4DA5E0055EF52 /* AppDelegate.swift */,
 				FBF356902108572D002D1753 /* UserData.swift */,
+				FBC30DB6213859390062DEFB /* GoalPopover.swift */,
 				FB6AF31121026D5E001309BC /* Main.swift */,
 				FBF3568E2107F9DF002D1753 /* MainInterfaceControllerButton.swift */,
 				1BA1686E20B4DA5E0055EF52 /* Assets.xcassets */,
@@ -281,6 +284,7 @@
 				FBF3568F2107F9DF002D1753 /* MainInterfaceControllerButton.swift in Sources */,
 				FB1212D72124BB1000E95D47 /* PickerNode.swift in Sources */,
 				1BA1689A20B60D8D0055EF52 /* Difficulty.swift in Sources */,
+				FBC30DB7213859390062DEFB /* GoalPopover.swift in Sources */,
 				FB6AF31221026D5E001309BC /* Main.swift in Sources */,
 				FB1536712116A3C5000AEE85 /* Color.swift in Sources */,
 				1BA1689620B520720055EF52 /* Goal.swift in Sources */,

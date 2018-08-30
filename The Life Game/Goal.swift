@@ -110,7 +110,9 @@ public class Goal : Hashable {
   }
   
   //Formats a text container that holds the view
-  public func addTextContainer(parentview : UIView) -> UIView {
+  public func addTextContainer(parentview : UIView) -> UIViewController {
+    let controller : UIViewController = UIViewController(nibName: nil, bundle: nil)
+    
     if parentview.subviews.count > 0 {
       textContainer = UIView(frame : CGRect(x : parentview.frame.minX, y : (parentview.subviews[parentview.subviews.count-1].frame.maxY + 1), width : parentview.bounds.width, height : parentview.bounds.height / 6))
     } else {
@@ -192,8 +194,15 @@ public class Goal : Hashable {
     textContainer!.addSubview(pointsTextView)
     textContainer!.addSubview(timerTextView)
     
-    parentview.addSubview(textContainer!)
-    return textContainer!
+    //parentview.addSubview(textContainer!)
+    controller.view = textContainer
+    return controller
+  }
+  
+  @objc func longPress(sender : UILongPressGestureRecognizer) {
+    print("long press from ")
+    print(sender)
+    
   }
 }
 

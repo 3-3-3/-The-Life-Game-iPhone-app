@@ -114,7 +114,7 @@ public class Main : UIViewController {
     //Populate second with the users goals
     UserData.goals = sortByDifficulty(UserData.goals)
     for goal in UserData.goals {
-      second.addSubview(goal.addTextContainer(parentview: second))
+      second.addSubview(goal.addTextContainer(parentview: second).view)
     }
     
     
