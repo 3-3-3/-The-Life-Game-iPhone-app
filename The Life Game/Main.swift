@@ -114,7 +114,14 @@ public class Main : UIViewController {
     //Populate second with the users goals
     UserData.goals = sortByDifficulty(UserData.goals)
     for goal in UserData.goals {
-      second.addSubview(goal.addTextContainer(parentview: second).view)
+      let goalContainer : GoalTextContainer = GoalTextContainer(parentview: second, goal: goal)
+      print("GoalTextContainer has been initialized")
+      goalContainer.loadView()
+      
+      second.addSubview(goalContainer.view)
+      print("GoalTextContainer added to second")
+      print()
+      print(goalContainer.isViewLoaded)
     }
     
     
@@ -160,20 +167,7 @@ public class Main : UIViewController {
   
   //selector function (can be used by objective-c methods when wrapped in a selector) to be use by the main timer to update views; put code here and call functions for anything that needs to be updated
   @objc func timerFired() -> String {
-    if interfaceBackDrop.subviews[1].isHidden == false {
-      for goal in UserData.goals {
-        if goal.textContainer != nil {
-          (goal.textContainer!.subviews[2] as? UITextView)?.text! = goal.formatTimer()!
-          print(goal.formatTimer())
-          ((goal.textContainer!.subviews[2]) as? UITextView)?.text = goal.formatTimer()
-          goal.textContainer!.subviews[2].setNeedsDisplay()
-        }
-        
-        else {
-          print("goal text container not initialized")
-        }
-      }
-    }
+    //print("goal text container not initialized")
     return "Fired"
   }
   

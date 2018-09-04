@@ -17,7 +17,6 @@ public class Goal : Hashable {
   private var diff : Difficulty
   private var length : Length
   private var timer : Timer?
-  var textContainer : UIView?
   public var hashValue: Int {
     get {
       return self.goal.hashValue
@@ -94,7 +93,7 @@ public class Goal : Hashable {
     self.length = new
   }
   
-  func formatTimer() -> String? {
+  public func formatTimer() -> String? {
     if timer != nil {
       let remainingTime : Double = timer!.fireDate.timeIntervalSinceNow
       
@@ -109,105 +108,126 @@ public class Goal : Hashable {
     }
   }
   
-  //Formats a text container that holds the view
+  //Formats a text container that holds the view, sets self.textContainer to that view, and returns the views viewController
   public func addTextContainer(parentview : UIView) -> UIViewController {
-    let controller : UIViewController = UIViewController(nibName: nil, bundle: nil)
+    let container : UIViewController = GoalTextContainer(parentview: parentview, goal: self)
+    parentview.addSubview(container.view)
     
-    if parentview.subviews.count > 0 {
-      textContainer = UIView(frame : CGRect(x : parentview.frame.minX, y : (parentview.subviews[parentview.subviews.count-1].frame.maxY + 1), width : parentview.bounds.width, height : parentview.bounds.height / 6))
-    } else {
-      textContainer = UIView(frame : CGRect(x : parentview.bounds.minX, y : parentview.bounds.minY,  width : parentview.bounds.width, height : parentview.bounds.height / 6))
-    }
-    
-    textContainer!.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-    
-    textContainer!.addSubview(UIView(frame : CGRect(x : textContainer!.bounds.minX + 2, y : textContainer!.bounds.minY + 2, width : textContainer!.bounds.width - 4, height : textContainer!.bounds.height - 4)))
-    
-    if self.getDiff() == .DIFFICULT {
-      textContainer!.subviews[0].backgroundColor = Color.DIFFICULTCOLOR
-    } else if self.getDiff() == .MEDIUM {
-      textContainer!.subviews[0].backgroundColor = Color.MEDIUMCOLOR
-    } else {
-      textContainer!.subviews[0].backgroundColor = Color.EASYCOLOR
-    }
-    
-    let titleTextView : UITextField = UITextField(frame : CGRect(x : textContainer!.subviews[0].bounds.minX + 5,
-                                                                 y : textContainer!.subviews[0].bounds.midY - ((textContainer!.subviews[0].bounds.height - 10) / 2),
-                                                                 width : textContainer!.subviews[0].bounds.width - 25,
-                                                                 height : textContainer!.subviews[0].bounds.height - 10))
-    titleTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-    titleTextView.text = self.getGoalTitle()
-    titleTextView.isUserInteractionEnabled = false
-    
-    let pointsTextView : UITextField = UITextField(frame : CGRect(x : textContainer!.subviews[0].bounds.midX,
-                                                                  y : textContainer!.subviews[0].bounds.midY - ((textContainer!.subviews[0].bounds.height - 10)/2),
-                                                                  width : 30,
-                                                                  height : textContainer!.bounds.height - 10))
-    pointsTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-    pointsTextView.text = String (self.points)
-    pointsTextView.isUserInteractionEnabled = false
-    
-    let timerTextView : UITextField = UITextField(frame : CGRect(x : textContainer!.subviews[0].bounds.width - 75,
-                                                                 y : textContainer!.subviews[0].bounds.midY - ((textContainer!.subviews[0].bounds.height
-                                                                  - 10) / 2),
-                                                                 width : 65 ,
-                                                                 height : textContainer!.bounds.height - 10))
-    timerTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-    timerTextView.text = self.formatTimer()
-    timerTextView.isUserInteractionEnabled = false
-    
-    
-    /*titleTextView.addConstraint(NSLayoutConstraint(item: titleTextView,
-                                                     attribute: .leftMargin,
-                                                     relatedBy: .equal,
-                                                     toItem: nil,
-                                                     attribute: .left,
-                                                     multiplier: 2,
-                                                     constant: 2))
-    
-    titleTextView.addConstraint(NSLayoutConstraint(item: pointsTextView,
-                                                     attribute: .right,
-                                                     relatedBy: .equal,
-                                                     toItem: titleTextView,
-                                                     attribute: .left,
-                                                     multiplier: 2,
-                                                     constant: titleTextView.superview!.bounds.midX))
-   
-   pointsTextView.addConstraint(NSLayoutConstraint(item: pointsTextView,
-                                                     attribute: .right,
-                                                     relatedBy: .equal,
-                                                     toItem: timerTextView,
-                                                     attribute: .left,
-                                                     multiplier: 2,
-                                                     constant: 10))
-  
-  timerTextView.addConstraint(NSLayoutConstraint(item: timerTextView,
-                                                   attribute: .rightMargin,
-                                                   relatedBy: .equal,
-                                                   toItem: nil,
-                                                   attribute: .left,
-                                                   multiplier: 2,
-                                                   constant: 2)) */
-    
-    
-    textContainer!.addSubview(titleTextView)
-    textContainer!.addSubview(pointsTextView)
-    textContainer!.addSubview(timerTextView)
-    
-    //parentview.addSubview(textContainer!)
-    controller.view = textContainer
-    return controller
-  }
-  
-  @objc func longPress(sender : UILongPressGestureRecognizer) {
-    print("long press from ")
-    print(sender)
-    
+    return container
   }
 }
 
 public func == (lhs : Goal, rhs : Goal) -> Bool {
   return lhs.hashValue == rhs.hashValue
+}
+
+
+//A viewcontroller class defining the behaviors of GoalTextContainer, such as those used in the main interface
+public class GoalTextContainer : UIViewController {
+  private var goal : Goal
+  private var parentview : UIView
+  
+  public init(parentview : UIView, goal : Goal) {
+    print("Initialization began")
+    self.parentview = parentview
+    self.goal = goal
+    
+    //Super
+    super.init(nibName: nil, bundle: nil)
+    
+    if parentview.subviews.count > 0 {
+      self.view = UIView(frame : CGRect(x : parentview.frame.minX, y : (parentview.subviews[parentview.subviews.count-1].frame.maxY + 1), width : parentview.bounds.width, height : parentview.bounds.height / 6))
+    } else {
+      self.view = UIView(frame : CGRect(x : parentview.bounds.minX, y : parentview.bounds.minY,  width : parentview.bounds.width, height : parentview.bounds.height / 6))
+    }
+    
+    self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+    
+    self.view.addSubview(UIView(frame : CGRect(x : self.view.bounds.minX + 2, y : self.view.bounds.minY + 2, width : self.view.bounds.width - 4, height : self.view.bounds.height - 4)))
+    
+    if goal.getDiff() == .DIFFICULT {
+      self.view.subviews[0].backgroundColor = Color.DIFFICULTCOLOR
+    } else if goal.getDiff() == .MEDIUM {
+      self.view.subviews[0].backgroundColor = Color.MEDIUMCOLOR
+    } else {
+      self.view.subviews[0].backgroundColor = Color.EASYCOLOR
+    }
+    
+    let titleTextView : UITextField = UITextField(frame : CGRect(x : self.view.subviews[0].bounds.minX + 5,
+                                                                 y : self.view.subviews[0].bounds.midY - ((self.view.subviews[0].bounds.height - 10) / 2),
+                                                                 width : self.view.subviews[0].bounds.width - 25,
+                                                                 height : self.view.subviews[0].bounds.height - 10))
+    titleTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+    titleTextView.text = goal.getGoalTitle()
+    titleTextView.isUserInteractionEnabled = false
+    
+    let pointsTextView : UITextField = UITextField(frame : CGRect(x : self.view.subviews[0].bounds.midX,
+                                                                  y : self.view.subviews[0].bounds.midY - ((self.view.subviews[0].bounds.height - 10)/2),
+                                                                  width : 30,
+                                                                  height : self.view.bounds.height - 10))
+    pointsTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+    pointsTextView.text = String (goal.getPoints())
+    pointsTextView.isUserInteractionEnabled = false
+    
+    let timerTextView : UITextField = UITextField(frame : CGRect(x : self.view.subviews[0].bounds.width - 75,
+                                                                 y : self.view.subviews[0].bounds.midY - ((self.view.subviews[0].bounds.height
+                                                                  - 10) / 2),
+                                                                 width : 65 ,
+                                                                 height : self.view.bounds.height - 10))
+    timerTextView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+    timerTextView.text = goal.formatTimer()
+    timerTextView.isUserInteractionEnabled = false
+    
+    
+    self.view.addSubview(titleTextView)
+    self.view.addSubview(pointsTextView)
+    self.view.addSubview(timerTextView)
+    
+    
+    
+    //Super
+    
+
+    
+    self.view.isUserInteractionEnabled = true
+    
+    print("self.view gesture recognizers: \n")
+    print(self.view.gestureRecognizers as Any)
+    print("\n")
+    //print("textContainer gesture recognizers: ")
+    //print(self.textContainer?.gestureRecognizers as Any)
+  }
+  
+  public override func viewDidLoad() {
+    print("ViewDidLoad")
+    let longPress : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressAction(sender:)))
+    longPress.allowableMovement = 20
+    longPress.minimumPressDuration = 0.5
+    longPress.numberOfTapsRequired = 0
+    longPress.numberOfTouchesRequired = 0
+    
+    self.view.addGestureRecognizer(longPress)
+    print(self.view.gestureRecognizers as Any)
+    
+    super.viewDidLoad()
+  }
+  
+  
+  @objc func longPressAction(sender : UIGestureRecognizer) {
+    print("Long Press Recieved")
+    
+    if let p = sender as? UILongPressGestureRecognizer {
+      guard p.state == .began else {
+        return
+      }
+    }
+    let popover : GoalPopover = GoalPopover(g: self.goal, source: parentview)
+    self.present(popover, animated: true, completion: nil)
+  }
+  
+  public required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 }
 
 
