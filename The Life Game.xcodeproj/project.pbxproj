@@ -12,7 +12,7 @@
 		1BA1687D20B4DA5E0055EF52 /* The_Life_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1687C20B4DA5E0055EF52 /* The_Life_GameTests.swift */; };
 		1BA1688820B4DA5E0055EF52 /* The_Life_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1688720B4DA5E0055EF52 /* The_Life_GameUITests.swift */; };
 		1BA1689620B520720055EF52 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689520B520720055EF52 /* Goal.swift */; };
-		1BA1689A20B60D8D0055EF52 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689920B60D8D0055EF52 /* Difficulty.swift */; };
+		1BA1689A20B60D8D0055EF52 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689920B60D8D0055EF52 /* Type.swift */; };
 		1BA1689C20B60DBF0055EF52 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1689B20B60DBF0055EF52 /* Length.swift */; };
 		FB1212D72124BB1000E95D47 /* PickerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1212D62124BB1000E95D47 /* PickerNode.swift */; };
 		FB1536712116A3C5000AEE85 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1536702116A3C5000AEE85 /* Color.swift */; };
@@ -49,7 +49,7 @@
 		1BA1688720B4DA5E0055EF52 /* The_Life_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Life_GameUITests.swift; sourceTree = "<group>"; };
 		1BA1688920B4DA5E0055EF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA1689520B520720055EF52 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
-		1BA1689920B60D8D0055EF52 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		1BA1689920B60D8D0055EF52 /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		1BA1689B20B60DBF0055EF52 /* Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		FB1212D62124BB1000E95D47 /* PickerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerNode.swift; sourceTree = "<group>"; };
 		FB12C6E4212FBEAF00DD3B4F /* The Life Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Life Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +109,7 @@
 				FB1212D62124BB1000E95D47 /* PickerNode.swift */,
 				FB1536702116A3C5000AEE85 /* Color.swift */,
 				1BA1689520B520720055EF52 /* Goal.swift */,
-				1BA1689920B60D8D0055EF52 /* Difficulty.swift */,
+				1BA1689920B60D8D0055EF52 /* Type.swift */,
 				1BA1689B20B60DBF0055EF52 /* Length.swift */,
 				1BA1686720B4DA5E0055EF52 /* AppDelegate.swift */,
 				FBF356902108572D002D1753 /* UserData.swift */,
@@ -283,7 +283,7 @@
 				FB15367B211CA7F4000AEE85 /* GeneralData.swift in Sources */,
 				FBF3568F2107F9DF002D1753 /* MainInterfaceControllerButton.swift in Sources */,
 				FB1212D72124BB1000E95D47 /* PickerNode.swift in Sources */,
-				1BA1689A20B60D8D0055EF52 /* Difficulty.swift in Sources */,
+				1BA1689A20B60D8D0055EF52 /* Type.swift in Sources */,
 				FBC30DB7213859390062DEFB /* GoalPopover.swift in Sources */,
 				FB6AF31221026D5E001309BC /* Main.swift in Sources */,
 				FB1536712116A3C5000AEE85 /* Color.swift in Sources */,

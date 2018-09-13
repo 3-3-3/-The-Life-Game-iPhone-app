@@ -9,16 +9,16 @@
 import UIKit
 
 public struct UserData {
-  public static var goals : [Goal] = [Goal(g: "Finish This App", t: "Finish", p: 100, d: .DIFFICULT, l: .YEARLY),
-                                      Goal(g: "Say Three Nice Things", t: "Say Nice Things", p: 25, d: .EASY, l: .STATIC),
-                                      Goal(g : "Meet someone new", t : "Meet Someone", p : 50, d : .MEDIUM, l : .DAILY),
-                                      Goal(g: "Clean Your House", t: "Clean", p: 75, d: .MEDIUM, l: .WEEKLY),
-                                      Goal(g: "Go to the gym three times a week", t: "Go To the Gym", p: 75, d: .DIFFICULT, l: .WEEKLY),
-                                      Goal(g: "Go to a resturant you have never been to", t: "Go Out", p: 50, d: .EASY, l: .DAILY),
-                                      Goal(g: "Think of a compliment.  Say it to the next person you see", t: "Compliment", p: 25, d: .EASY, l: .DAILY),
-                                      Goal(g: "Do an abbs work out everyday", t: "Abbs workout", p: 50, d: .MEDIUM, l: .STATIC),
-                                      Goal(g: "Meditate for 25 minutes", t: "Meditate", p: 25, d: .DIFFICULT, l: .DAILY),
-                                      Goal(g: "Run a total of 10 miles this week", t: "Run", p: 25, d: .EASY, l: .WEEKLY)
+  public static var goals : [Goal] = [Goal(g: "Finish This App", t: "Finish", p: 100, d: .MIND, l: .YEARLY),
+                                      Goal(g: "Say Three Nice Things", t: "Say Nice Things", p: 25, d: .HEART, l: .STATIC),
+                                      Goal(g : "Meet someone new", t : "Meet Someone", p : 50, d : .BODY, l : .DAILY),
+                                      Goal(g: "Clean Your House", t: "Clean", p: 75, d: .BODY, l: .WEEKLY),
+                                      Goal(g: "Go to the gym three times a week", t: "Go To the Gym", p: 75, d: .MIND, l: .WEEKLY),
+                                      Goal(g: "Go to a resturant you have never been to", t: "Go Out", p: 50, d: .HEART, l: .DAILY),
+                                      Goal(g: "Think of a compliment.  Say it to the next person you see", t: "Compliment", p: 25, d: .HEART, l: .DAILY),
+                                      Goal(g: "Do an abbs work out everyday", t: "Abbs workout", p: 50, d: .BODY, l: .STATIC),
+                                      Goal(g: "Meditate for 25 minutes", t: "Meditate", p: 25, d: .MIND, l: .DAILY),
+                                      Goal(g: "Run a total of 10 miles this week", t: "Run", p: 25, d: .HEART, l: .WEEKLY)
                                       ]
   
   public static func addGoal(goal : Goal) {

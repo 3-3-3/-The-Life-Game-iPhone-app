@@ -98,11 +98,11 @@ public class Main : UIViewController {
     for cat in GeneralData.pickerHierarchy {
       switch cat.getValue() {
         case "Heart" :
-          third.addSubview(cat.pickButton(parent: third, color : Color.HEART))
+          third.addSubview(cat.pickButton(parent: third, color : Color.HEARTCOLOR))
         case "Mind" :
-          third.addSubview(cat.pickButton(parent : third, color : Color.MIND))
+          third.addSubview(cat.pickButton(parent : third, color : Color.MINDCOLOR))
         case "Body" :
-          third.addSubview(cat.pickButton(parent : third, color : Color.BODY))
+          third.addSubview(cat.pickButton(parent : third, color : Color.BODYCOLOR))
         default :
           third.addSubview(cat.pickButton(parent : third, color : Color.BACKGROUND_FOUR))
       }
@@ -112,15 +112,13 @@ public class Main : UIViewController {
     eventTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
     
     //Populate second with the users goals
-    UserData.goals = sortByDifficulty(UserData.goals)
+    UserData.goals = sortByType(UserData.goals)
     for goal in UserData.goals {
       let goalContainer : GoalTextContainer = GoalTextContainer(parentview: second, goal: goal)
       print("GoalTextContainer has been initialized")
-      goalContainer.loadView()
       
       second.addSubview(goalContainer.view)
       print("GoalTextContainer added to second")
-      print()
       print(goalContainer.isViewLoaded)
     }
     
@@ -144,25 +142,21 @@ public class Main : UIViewController {
     interfaceBackDrop.subviews[2].isHidden = true
     
     //a swipe gesture recognizer that should update the main interfaces in a similar fashion as the mian interface buttons created above
-    /*let swiper : UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(changeMainInterfaceSwipe(sender:)))
+    let swiper : UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(changeMainInterfaceSwipe(sender:)))
     first.addGestureRecognizer(swiper)
     second.addGestureRecognizer(swiper)
-    third.addGestureRecognizer(swiper)*/
+    third.addGestureRecognizer(swiper)
   }
 
   
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
-  
+
   @objc func pickTapper(sender : UITapGestureRecognizer) {
     for view in third.subviews {
       view.removeFromSuperview()
     }
-    
-    
-    
   }
   
   //selector function (can be used by objective-c methods when wrapped in a selector) to be use by the main timer to update views; put code here and call functions for anything that needs to be updated
@@ -226,11 +220,11 @@ public class Main : UIViewController {
   
   /*A sort function that should theoretically sort an array of goals by two criteria
       *switch the first criteria, and create neceasary arrays for the passed criteria.
-      *Iterate over goalsArray, and then switch its possible outcomes (i.e. .MEDIUM for Difficulty)
+      *Iterate over goalsArray, and then switch its possible outcomes (i.e. .BODY for Type)
       *call a sort function on each of those filled arrays for the secondCriteria (insertion sort)
       *return
   */
-  func sortBy(_ goalsArray : [Goal], firstCriteria : String = "Difficulty", secondCriteria : String = "Length") -> [Goal] {
+  func sortBy(_ goalsArray : [Goal], firstCriteria : String = "Type", secondCriteria : String = "Length") -> [Goal] {
     var returnArray : [Goal] = goalsArray
     
     switch firstCriteria {
@@ -270,11 +264,11 @@ public class Main : UIViewController {
             monthly = sortByTitle(monthly)
             yearly = sortByTitle(yearly)
           default :
-            stat = sortByDifficulty(stat)
-            daily = sortByDifficulty(daily)
-            weekly = sortByDifficulty(weekly)
-            monthly = sortByDifficulty(monthly)
-            yearly = sortByDifficulty(yearly)
+            stat = sortByType(stat)
+            daily = sortByType(daily)
+            weekly = sortByType(weekly)
+            monthly = sortByType(monthly)
+            yearly = sortByType(yearly)
         }
       
         for g in stat {
@@ -328,10 +322,10 @@ public class Main : UIViewController {
               seventyFives = sortByTitle(seventyFives)
               oneHundreds = sortByTitle(oneHundreds)
             default :
-              twentyFives = sortByDifficulty(twentyFives)
-              fifties = sortByDifficulty(fifties)
-              seventyFives = sortByDifficulty(seventyFives)
-              oneHundreds = sortByDifficulty(oneHundreds)
+              twentyFives = sortByType(twentyFives)
+              fifties = sortByType(fifties)
+              seventyFives = sortByType(seventyFives)
+              oneHundreds = sortByType(oneHundreds)
           }
           for g in oneHundreds {
             returnArray.append(g)
@@ -353,43 +347,43 @@ public class Main : UIViewController {
         returnArray = sortByTitle(returnArray)
       
       default :
-        var difficult : [Goal] = []
-        var medium : [Goal] = []
-        var easy : [Goal] = []
+        var mind : [Goal] = []
+        var body : [Goal] = []
+        var heart : [Goal] = []
       
         for goal in returnArray {
-          if goal.getDiff() == .DIFFICULT {
-            difficult.append(goal)
+          if goal.getDiff() == .MIND {
+            mind.append(goal)
           }
-          else if goal.getDiff() == .MEDIUM {
-            medium.append(goal)
+          else if goal.getDiff() == .BODY {
+            body.append(goal)
           }
           else {
-            easy.append(goal)
+            heart.append(goal)
           }
         }
       
         switch secondCriteria {
           case "Points" :
-            difficult = sortByPoints(difficult)
-            medium = sortByPoints(medium)
-            easy = sortByPoints(easy)
+            mind = sortByPoints(mind)
+            body = sortByPoints(body)
+            heart = sortByPoints(heart)
           case "Title" :
-            difficult = sortByTitle(difficult)
-            medium = sortByTitle(medium)
-            easy = sortByTitle(easy)
+            mind = sortByTitle(mind)
+            body = sortByTitle(body)
+            heart = sortByTitle(heart)
           default :
-            difficult = sortByLength(difficult)
-            medium = sortByLength(medium)
-            easy = sortByLength(easy)
+            mind = sortByLength(mind)
+            body = sortByLength(body)
+            heart = sortByLength(heart)
         }
-        for g in difficult {
+        for g in mind {
           returnArray.append(g)
         }
-        for g in medium {
+        for g in body {
           returnArray.append(g)
         }
-        for g in easy {
+        for g in heart {
           returnArray.append(g)
         }
     }
@@ -397,12 +391,12 @@ public class Main : UIViewController {
   }
   /*
   Sort functions by (Insertion sort) (O(n^2) Algorithm):
-    *Difficulty
+    *Type
     *Length
     *Points
     *Title
   */
-  func sortByDifficulty(_ goalsArray : [Goal]) -> [Goal] {
+  func sortByType(_ goalsArray : [Goal]) -> [Goal] {
     var returnArray : [Goal] = goalsArray
     //iterate the contents of the array besides the first
     for num in 1 ... returnArray.count - 1 {

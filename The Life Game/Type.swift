@@ -8,19 +8,19 @@
 
 import Foundation
 
-public enum Difficulty : Hashable {
-  case DIFFICULT
-  case MEDIUM
-  case EASY
+public enum Type : Hashable {
+  case MIND
+  case BODY
+  case HEART
 
   public var hashValue : Int {
     get {
       switch self {
-        case .DIFFICULT :
+        case .MIND :
           return 0
-        case .MEDIUM :
+        case .BODY :
           return 1
-        case .EASY :
+        case .HEART :
           return 2
       }
     }
@@ -28,7 +28,7 @@ public enum Difficulty : Hashable {
 }
 
 //Equatable conformance 
-public func == (lhs : Difficulty, rhs : Difficulty) -> Bool {
+public func == (lhs : Type, rhs : Type) -> Bool {
   return lhs.hashValue == rhs.hashValue
 }
 
