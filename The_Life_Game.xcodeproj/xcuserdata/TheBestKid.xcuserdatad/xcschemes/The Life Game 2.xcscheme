@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BA1686320B4DA5E0055EF52"
-               BuildableName = "The Life Game.app"
-               BlueprintName = "The Life Game"
-               ReferencedContainer = "container:The Life Game.xcodeproj">
+               BuildableName = "The_Life_Game.app"
+               BlueprintName = "The_Life_Game"
+               ReferencedContainer = "container:The_Life_Game.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA1686320B4DA5E0055EF52"
-            BuildableName = "The Life Game.app"
-            BlueprintName = "The Life Game"
-            ReferencedContainer = "container:The Life Game.xcodeproj">
+            BuildableName = "The_Life_Game.app"
+            BlueprintName = "The_Life_Game"
+            ReferencedContainer = "container:The_Life_Game.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA1686320B4DA5E0055EF52"
-            BuildableName = "The Life Game.app"
-            BlueprintName = "The Life Game"
-            ReferencedContainer = "container:The Life Game.xcodeproj">
+            BuildableName = "The_Life_Game.app"
+            BlueprintName = "The_Life_Game"
+            ReferencedContainer = "container:The_Life_Game.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BA1686320B4DA5E0055EF52"
-            BuildableName = "The Life Game.app"
-            BlueprintName = "The Life Game"
-            ReferencedContainer = "container:The Life Game.xcodeproj">
+            BuildableName = "The_Life_Game.app"
+            BlueprintName = "The_Life_Game"
+            ReferencedContainer = "container:The_Life_Game.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

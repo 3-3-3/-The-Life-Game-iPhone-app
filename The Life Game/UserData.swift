@@ -21,6 +21,12 @@ public struct UserData {
                                       Goal(g: "Run a total of 10 miles this week", t: "Run", p: 25, d: .HEART, l: .WEEKLY)
                                       ]
   
+  public static var past : [Day] = [Day(date: Date(), points: 100),
+                                    Day(date: Date(timeIntervalSinceNow: -(60*60*24)), points: 75),
+                                    Day(date: Date(timeIntervalSinceNow: -2*(60*60*24)), points: 125),
+                                    Day(date: Date(timeIntervalSinceNow: -3*(60*60*24)), points: 150),
+                                    Day(date: Date(timeIntervalSinceNow: -4*(60*60*24)), points: 50)]
+  
   public static func addGoal(goal : Goal) {
     goals.append(goal)
   }

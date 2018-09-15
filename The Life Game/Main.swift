@@ -20,9 +20,13 @@ public class Main : UIViewController {
   
   
   //three main interfaces
-  var first : UIScrollView
+  var first : ANDLineChartView
   var second : UIScrollView
   var third : UIScrollView
+  
+  var firstDataSource : GoalData?
+  
+  
   
   var eventTimer : Timer? = nil //A timer used across the entire app; when it fires, views should update themselves
 
@@ -56,12 +60,12 @@ public class Main : UIViewController {
                                               width : UIScreen.main.bounds.width,
                                               height : Main.screenSegment * 9.5))
     
-    first = UIScrollView(frame : CGRect(x : 0,
+    first = ANDLineChartView(frame : CGRect(x : 0,
                                         y : 0,
                                         width : UIScreen.main.bounds.width,
                                         height : Main.screenSegment * 9.5))
-    first.backgroundColor = Color.BACKGROUND_THREE
-    first.contentSize = CGSize(width: first.frame.width, height: (first.frame.height / 6)*20.0 + (20*2))
+    firstDataSource = GoalData(data : UserData.past)
+    first.dataSource = firstDataSource
     
     second = UIScrollView(frame : CGRect(x : 0,
                                         y : 0,
@@ -83,6 +87,7 @@ public class Main : UIViewController {
                                         y : 0,
                                         width : UIScreen.main.bounds.width,
                                         height : Main.screenSegment * 9.5))
+    
     
     third.backgroundColor = Color.BACKGROUND_THREE
 
