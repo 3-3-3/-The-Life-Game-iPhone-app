@@ -20,11 +20,25 @@ public class Main : UIViewController {
   
   
   //three main interfaces
-  var first : ANDLineChartView
+  var first : UIScrollView
   var second : UIScrollView
   var third : UIScrollView
   
-  var firstDataSource : GoalData?
+  var firstChart : ANDLineChartView
+  var mindChart : ANDLineChartView
+  var bodyChart : ANDLineChartView
+  var heartChart : ANDLineChartView
+  
+  var firstChartDataSource : GoalData?
+  var mindChartDataSource : GoalData?
+  var bodyChartDataSource : GoalData?
+  var heartChartDataSource : GoalData?
+  
+  var charts : [Int : [String : ANDLineChartView]] = [:]
+  
+  var firstID : UIView
+  var secondID : UIView
+  var thirdID : UIView
   
   
   
@@ -52,6 +66,7 @@ public class Main : UIViewController {
                                             y : upperUserInfo.bounds.maxY,
                                             width : UIScreen.main.bounds.width,
                                             height : Main.screenSegment * 3))
+    mainInterfaceID.backgroundColor = Color.BACKGROUND_ONE
     
     
     
@@ -60,12 +75,63 @@ public class Main : UIViewController {
                                               width : UIScreen.main.bounds.width,
                                               height : Main.screenSegment * 9.5))
     
-    first = ANDLineChartView(frame : CGRect(x : 0,
+    first = UIScrollView(frame : CGRect(x : 0,
                                         y : 0,
                                         width : UIScreen.main.bounds.width,
                                         height : Main.screenSegment * 9.5))
-    firstDataSource = GoalData(data : UserData.past)
-    first.dataSource = firstDataSource
+    
+    firstChart = ANDLineChartView(frame : CGRect(x : 0,
+                                        y : 0,
+                                        width : UIScreen.main.bounds.width,
+                                        height : Main.screenSegment * 9.5))
+    firstChartDataSource = GoalData(data : UserData.pastTotal)
+    firstChart.dataSource = firstChartDataSource
+    
+    
+    mindChart = ANDLineChartView(frame : CGRect(x : 0,
+                                        y : 0,
+                                        width : UIScreen.main.bounds.width,
+                                        height : Main.screenSegment * 9.5))
+    mindChartDataSource = GoalData(data : UserData.pastMind)
+    mindChart.dataSource = mindChartDataSource
+    mindChart.backgroundColor = Color.MINDCOLOR
+    mindChart.chartBackgroundColor = Color.MINDCOLOR
+    
+    
+    bodyChart = ANDLineChartView(frame : CGRect(x : 0,
+                                        y : 0,
+                                        width : UIScreen.main.bounds.width,
+                                        height : Main.screenSegment * 9.5))
+    bodyChartDataSource = GoalData(data : UserData.pastBody)
+    bodyChart.dataSource = bodyChartDataSource
+    bodyChart.backgroundColor = Color.BODYCOLOR
+    bodyChart.chartBackgroundColor = Color.BODYCOLOR
+    
+    heartChart = ANDLineChartView(frame : CGRect(x : 0,
+                                        y : 0,
+                                        width : UIScreen.main.bounds.width,
+                                        height : Main.screenSegment * 9.5))
+    heartChartDataSource = GoalData(data : UserData.pastHeart)
+    heartChart.dataSource = heartChartDataSource
+    heartChart.backgroundColor = Color.HEARTCOLOR
+    heartChart.chartBackgroundColor = Color.HEARTCOLOR
+    
+    charts[0] = ["Total" : firstChart]
+    charts[1] = ["Mind" : mindChart]
+    charts[2] = ["Body" : bodyChart]
+    charts[3] = ["Heart" : heartChart]
+    
+    for i in stride(from: 0, to: 3, by : 1) {
+      for chart in charts[i]!.values {
+        first.addSubview(chart)
+      }
+    }
+    
+    heartChart.isHidden = true
+    mindChart.isHidden = true
+    bodyChart.isHidden = true
+    
+    firstID = UIView()
     
     second = UIScrollView(frame : CGRect(x : 0,
                                         y : 0,
@@ -79,6 +145,7 @@ public class Main : UIViewController {
       content += second.bounds.height / 6 + 1
     }
     second.contentSize = CGSize(width : second.frame.width, height : content)
+    secondID = UIView()
     
     
 
@@ -90,6 +157,7 @@ public class Main : UIViewController {
     
     
     third.backgroundColor = Color.BACKGROUND_THREE
+    thirdID = UIView()
 
     interfaceBackDrop.addSubview(first)
     interfaceBackDrop.addSubview(second)
@@ -127,8 +195,7 @@ public class Main : UIViewController {
       print(goalContainer.isViewLoaded)
     }
     
-    
-    let lowerBarControlButtonOne : UIView = MainInterfaceControllerButton(interfaceID : 1, m : self, xPos : 0, icon : #imageLiteral(resourceName: "IconTest"), parent : lowerBarControl).view!
+    let lowerBarControlButtonOne : UIView = MainInterfaceControllerButton(interfaceID : 1, m : self, xPos : 0, icon : #imageLiteral(resourceName: "chart-icon"), parent : lowerBarControl).view!
     lowerBarControl.addSubview(lowerBarControlButtonOne)
     
     let lowerBarControlButtonTwo : UIView = MainInterfaceControllerButton(interfaceID : 2, m : self, xPos : lowerBarControlButtonOne.frame.maxX, icon : #imageLiteral(resourceName: "Image-1"), parent : lowerBarControl).view!
@@ -136,6 +203,77 @@ public class Main : UIViewController {
     
     let lowerBarControlButtonThree : UIView = MainInterfaceControllerButton(interfaceID : 3, m : self, xPos : lowerBarControlButtonTwo.frame.maxX, icon : #imageLiteral(resourceName: "IconTest"), parent :  lowerBarControl).view!
     lowerBarControl.addSubview(lowerBarControlButtonThree)
+    
+    self.firstID = UIView(frame : self.mainInterfaceID.bounds)
+    self.secondID = UIView(frame : self.mainInterfaceID.bounds)
+    self.thirdID = UIView(frame : self.mainInterfaceID.bounds)
+    
+    let leftArrow = UIImageView(image : #imageLiteral(resourceName: "LeftArrow"))
+    //Image : https://www.flaticon.com/packs/free-basic-ui-elements
+    leftArrow.translatesAutoresizingMaskIntoConstraints = false
+    leftArrow.isUserInteractionEnabled = true
+    let leftTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftArrow(sender:)))
+    leftArrow.addGestureRecognizer(leftTap)
+    
+    let rightArrow = UIImageView(image : #imageLiteral(resourceName: "RightArrow"))
+    //Image : https://www.flaticon.com/packs/free-basic-ui-elements
+    rightArrow.translatesAutoresizingMaskIntoConstraints = false
+    rightArrow.isUserInteractionEnabled = true
+    let rightTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(rightArrow(sender:)))
+    rightArrow.addGestureRecognizer(rightTap)
+    
+    let chartTitle = UILabel()
+    chartTitle.translatesAutoresizingMaskIntoConstraints = false
+    chartTitle.textAlignment = .center
+    chartTitle.font = UIFont(name : chartTitle.font.fontName, size : 50)
+    chartTitle.text = "Total"
+    
+    firstID.addSubview(chartTitle)
+    firstID.addSubview(leftArrow)
+    firstID.addSubview(rightArrow)
+  
+    let views = [
+      "firstID" : firstID,
+      "leftArrow" : leftArrow,
+      "rightArrow" : rightArrow,
+      "chartTitle" : chartTitle
+    ]
+    
+    
+    //only call on views with a superview
+    /*func centerFromTop(_ view : UIView) -> CGFloat {
+      return ((view.superview!.bounds.height / 2.0) - (view.frame.width / 2.0))
+    }*/
+    
+    let arrowButtonScalar : CGFloat = 60.0
+    let hFormatString = "H:|-10-[leftArrow(\(arrowButtonScalar))]-[chartTitle]-[rightArrow(==leftArrow)]-10-|"
+    let vLeftString = "V:|-\(((self.mainInterfaceID.bounds.height / 2.0) - (arrowButtonScalar / 2)))-[leftArrow(\(arrowButtonScalar))]"
+    let vRightString = "V:[rightArrow(\(arrowButtonScalar))]"
+    let vChartString = "V:[chartTitle(\(arrowButtonScalar))]"
+    let vLeftConstraint = NSLayoutConstraint.constraints(withVisualFormat: vLeftString, options: .alignAllLeading, metrics: nil, views: views)
+    let vRightConstraint = NSLayoutConstraint.constraints(withVisualFormat: vRightString, options: .alignAllLeading, metrics: nil, views: views)
+    let vChartConstraint = NSLayoutConstraint.constraints(withVisualFormat: vChartString, options: .alignAllLeading, metrics: nil, views: views)
+    let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormatString, options: .alignAllCenterY, metrics: nil, views: views)
+    NSLayoutConstraint.activate(hConstraints)
+    NSLayoutConstraint.activate(vLeftConstraint)
+    NSLayoutConstraint.activate(vRightConstraint)
+    NSLayoutConstraint.activate(vChartConstraint)
+    
+    
+    
+    mainInterfaceID.addSubview(firstID)
+    mainInterfaceID.addSubview(secondID)
+    mainInterfaceID.addSubview(thirdID)
+    thirdID.isHidden = true
+    secondID.isHidden = true
+    
+    
+    
+    
+    
+    
+    
+    
     
     mainView.addSubview(upperUserInfo)
     mainView.addSubview(mainInterfaceID)
@@ -172,6 +310,80 @@ public class Main : UIViewController {
   
   public override func loadView() {
     self.view = mainView
+  }
+  
+  @objc func leftArrow(sender : UITapGestureRecognizer) {
+    print("left tap")
+    for i in stride(from: 0, to: self.charts.count, by: 1) {
+      for chart in charts[i]!.values {
+        if chart.isHidden == false {
+          chart.isHidden = true
+          print("chart \(i) is visible \n")
+          //If it is not the first chart
+          if i != 0 {
+            for c in charts[i-1]!.values {
+              c.isHidden = false
+            }
+            
+            if let t = firstID.subviews[0] as? UILabel {
+              for title in charts[i-1]!.keys {
+                t.text = title
+              }
+            }
+            return
+          }
+          else {
+            for c in charts[charts.count-1]!.values {
+              print("heart chart should be visible form left tap")
+              c.isHidden = false
+            }
+            
+            if let t = firstID.subviews[0] as? UILabel {
+              for title in charts[charts.count-1]!.keys {
+                t.text = title
+              }
+            }
+            return
+          }
+        }
+      }
+    }
+  }
+  
+  @objc func rightArrow(sender : UITapGestureRecognizer) {
+    for i in stride(from: 0, to: self.charts.count, by: 1) {
+      for chart in charts[i]!.values {
+        if chart.isHidden == false {
+          if i <=  (charts.count-2) { //any case but the last
+            chart.isHidden = true
+            for c in charts[i+1]!.values {
+              c.isHidden = false
+              print("\(i), \(i+1) is hidden: \(c.isHidden)")
+            }
+            
+            if let t = firstID.subviews[0] as? UILabel {
+              for title in charts[i+1]!.keys {
+                t.text = title
+              }
+            }
+            return
+          }else{
+            for c in charts[0]!.values {
+              c.isHidden = false
+              for c in charts[0]!.values {
+                c.isHidden = false
+              }
+              if let t = firstID.subviews[0] as? UILabel {
+                for title in charts[0]!.keys {
+                  t.text = title
+                }
+              }
+            }
+            return
+          }
+        }
+      }
+    }
   }
   
   //Selector functions to update

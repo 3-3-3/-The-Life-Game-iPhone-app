@@ -57,7 +57,7 @@
 
 - (void)setupGradientLayer{
   _gradientLayer = [CAGradientLayer layer];
-  CGColorRef color1 = [UIColor colorWithWhite:1.000 alpha:0.7].CGColor;
+  CGColorRef color1 = [UIColor colorWithWhite:1.000 alpha:0.0].CGColor;
   CGColorRef color2 = [UIColor colorWithWhite:1.000 alpha:0.0].CGColor;
   [_gradientLayer setColors:@[(__bridge id)color1,(__bridge id)color2]];
   [_gradientLayer setLocations:@[@0.0,@0.9]];

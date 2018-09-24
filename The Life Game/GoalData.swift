@@ -57,7 +57,7 @@ import Foundation
   }
   
   public func numberOfGridIntervals(in chartView: ANDLineChartView!) -> UInt {
-    return UInt (data.count * 5)
+    return UInt (16)
   }
   
   public func chartView(_ chartView: ANDLineChartView!, valueForElementAtRow row: UInt) -> CGFloat {
@@ -65,10 +65,16 @@ import Foundation
   }
   
   public func chartView(_ chartView: ANDLineChartView!, descriptionForGridIntervalValue interval: CGFloat) -> String! {
-    return "0"
+    /*if interval != 0.0 {
+      let intervalValue = (CGFloat (max()) / (15 - interval)).rounded()
+      return String(Int (intervalValue))
+    }else{
+      return "0"
+    }*/
+    return String (Int (interval))
   }
   
-  public func maxValueForGridInterval(in chartView: ANDLineChartView!) -> CGFloat {
+  func max() -> Int {
     var max : Int = 0
     
     for day in self.data {
@@ -77,7 +83,11 @@ import Foundation
       }
     }
     
-    return CGFloat (max)
+    return max
+  }
+  
+  public func maxValueForGridInterval(in chartView: ANDLineChartView!) -> CGFloat {
+    return CGFloat (self.max())
   }
   
   public func minValueForGridInterval(in chartView: ANDLineChartView!) -> CGFloat {

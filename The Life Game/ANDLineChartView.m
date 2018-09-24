@@ -12,7 +12,7 @@
 #import "The_Life_Game-Swift.h"
 
 #define DEFAULT_ELEMENT_SPACING 30.0
-#define DEFAULT_FONT_SIZE 12.0
+#define DEFAULT_FONT_SIZE 14.00
 
 #define TRANSITION_DURATION 0.36
 
@@ -139,6 +139,7 @@
 
 - (CGFloat)spacingForElementAtRow:(NSUInteger)row{
   CGFloat spacing = [self elementSpacing];
+  /*
   if(_delegate && [_delegate respondsToSelector:@selector(chartView:spacingForElementAtRow:)]){
     CGFloat newSpacing = [_delegate chartView:self spacingForElementAtRow:row];
     NSAssert(newSpacing > 0, @"Spacing cannot be smaller than 0.0");
@@ -147,8 +148,15 @@
     ? imageSize.width/2.0
     : imageSize.width;
     if(newSpacing > 0) spacing = newSpacing;
-  }
+  }*/
   
+  if([_dataSource respondsToSelector:@selector(numberOfElementsInChartView:)]) {
+    if([_dataSource numberOfElementsInChartView:self] < 10.0) {
+      spacing = ((self.frame.size.width / [_dataSource numberOfElementsInChartView:self]) - (self.frame.size.width / 15));
+    }else{
+      spacing = (self.frame.size.width / 10);
+    }
+  }
   return spacing;
 }
 

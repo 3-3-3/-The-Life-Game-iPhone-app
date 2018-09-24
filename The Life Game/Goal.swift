@@ -108,7 +108,7 @@ public class Goal : Hashable {
   
   public func formatTimer() -> String? {
     if time != nil {
-      print("time is not nil")
+      //print("time is not nil")
       let remainingTime : Double = abs(self.time!.timeIntervalSinceNow)
       
       
@@ -120,7 +120,7 @@ public class Goal : Hashable {
       }
     }
     else {
-      print("time is nil")
+      //print("time is nil")
       return nil
     }
   }

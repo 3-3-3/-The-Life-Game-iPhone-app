@@ -13,8 +13,8 @@ public class GeneralData {
   public static var allGoals : [Goal] = []
   public static var pickerHierarchy : [PickerNode] = [
     PickerNode(val: "Mind"),
-    PickerNode(val : "Heart"),
-    PickerNode(val : "Body")
+    PickerNode(val : "Body"),
+    PickerNode(val : "Heart")
   ]
   
   public static func fillNodes() {
@@ -25,14 +25,14 @@ public class GeneralData {
 
     
     //Add sub categories to heart
-    pickerHierarchy[1].addNext(picker : PickerNode(val: "Love", prev: pickerHierarchy))
-    pickerHierarchy[1].addNext(picker : PickerNode(val: "Compassion", prev: pickerHierarchy))
-    pickerHierarchy[1].addNext(picker : PickerNode(val: "Creation", prev: pickerHierarchy))
+    pickerHierarchy[2].addNext(picker : PickerNode(val: "Love", prev: pickerHierarchy))
+    pickerHierarchy[2].addNext(picker : PickerNode(val: "Compassion", prev: pickerHierarchy))
+    pickerHierarchy[2].addNext(picker : PickerNode(val: "Creation", prev: pickerHierarchy))
     
     //Add sub categories to body
-    pickerHierarchy[2].addNext(picker: PickerNode(val: "Power", prev: pickerHierarchy))
-    pickerHierarchy[2].addNext(picker: PickerNode(val : "Grace", prev : pickerHierarchy))
-    pickerHierarchy[2].addNext(picker: PickerNode(val : "Grace", prev : pickerHierarchy))
+    pickerHierarchy[1].addNext(picker: PickerNode(val: "Power", prev: pickerHierarchy))
+    pickerHierarchy[1].addNext(picker: PickerNode(val : "Grace", prev : pickerHierarchy))
+    pickerHierarchy[1].addNext(picker: PickerNode(val : "Grace", prev : pickerHierarchy))
     //do any additional filling here
   }
 }
